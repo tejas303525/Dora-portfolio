@@ -18,11 +18,11 @@ return (
                         </button>
                         <div className="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div className="navbar-nav ms-auto mx-xl-auto p-0">
-                                <a href="#" className="nav-item nav-link active text-secondary">Home</a>
+                                <Link to='/' className="nav-item nav-link active text-secondary">Home</Link>
                                 <Link to="/about" className="nav-item nav-link">About</Link>
                                
                                 <div className="nav-item dropdown">
-                                    <Link to={"/services"} className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</Link>
+                                    <div to={"/services"} className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</div>
                                     <div className="dropdown-menu rounded">
                                         <a href="#" className="dropdown-item">Printer Services</a>
                                         <a href="#" className="dropdown-item">Laptop Services</a>
