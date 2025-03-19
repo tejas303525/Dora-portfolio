@@ -31,7 +31,7 @@ return (
                                 <div className="nav-item dropdown">
                                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                     <div className="dropdown-menu rounded">
-                                        <a href="#" className="dropdown-item">Our Blog</a>
+                                        <Link to='/blog' className='dropdown-item'>Blog </Link>
                                         <a href="#" className="dropdown-item">Our Team</a>
                                         <a href="#" className="dropdown-item">Testimonials</a>
                                     </div>

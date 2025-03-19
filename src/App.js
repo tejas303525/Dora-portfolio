@@ -8,6 +8,7 @@ import Testimonials from "./pages/Testimonials"
 import Project from "./pages/Project"
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import MediumPosts from "./pages/MediumPosts"
+import Blog from "./pages/Blog"
 function App() {
   return (
     <BrowserRouter>
