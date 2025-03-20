@@ -3,37 +3,46 @@ import ToText from '../utils/ToText';
 import Navbar from './Navbar'
 
 export default function Blog({ blog, profile }) {
-    console.log(blog)
-    const haveBlogs = () => {
-        if (blog.items) {
-            return blog.items.map((post, index) => (
-                <div className='grid card ab shadow' key={index}>
-                    <div className='card-image tb' style={{ backgroundImage: `url(${post.thumbnail})` }}>
-                        <div className='authorImg'>
-                            <a href={profile.profileUrl} rel='noopener noreferrer' target='_blank' style={{ backgroundImage: `url(${profile.profileImage})` }}></a>
-                        </div>
-                    </div>
-                    <div className='card-body'>
-                        <h5 className='card-title'>
-                            <a href={post.link} className='postTitle' rel='noopener noreferrer' target='_blank'>{post.title}</a>
-                        </h5>
-                        <p className='cardText'>{ToText(post.description.substring(0, 1000))}...</p>
-                    </div>
-                </div>
-            ));
-        }
-    };
-
     return (
-        
-        <div className='blogs'>
-             <Navbar/>
-            <h2>Blog Posts</h2>
-            <div className='container'>
-                {blog.isLoading ? 'Loading...' : haveBlogs()}
-            </div>
-        </div>
-    );
-}
+            <>  
+            <Navbar />
+                <div className="container">
+                    <h1 className="text-center my-5">Medium Posts</h1>
+                    {blog.isLoading ? (
+                        <p>Loading...</p>
+                    ) : blog.error ? (
+                        <p className="text-danger">Failed to load blogs: {blog.error.message}</p>
+                    ) : (
+                        <div className="row">
+                            {blog.items.map((post, index) => (
+                                <div className="col-md-4" key={index}>
+                                    <div className="card mb-4">
+                                        <div className="card-body">
+                                            <h5 className="card-title">
+                                                <a href={post.link} target="_blank" rel="noopener noreferrer">
+                                                    {post.title}
+                                                </a>
+                                            </h5>
+                                            <p className="card-text">{ToText(post.description.substring(0, 500))}...</p>
+                                            <a
+                                                href={post.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="read-more-btn"
+                                            >
+                                                Read More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+                </>
 
-// Not used
+            );
+        }
+        
+        
+
