@@ -4,14 +4,14 @@ import Navbar from './Navbar';
 import carousal1 from "./../assets/img/carousel-1.jpg";
 import carousal2 from "./../assets/img/carousel-2.jpg";
 import about1 from "./../assets/img/about-1.jpg";   
-import about2 from "./../assets/img/about-2.jpg";   
-import project1 from "./../assets/img/project-1.jpg";
+import about2 from "./../assets/img/about-2.jpg";
+import work1 from "./../assets/img/work1.jpeg";   
+
 import project2 from "./../assets/img/project-2.jpg";
 import project3 from "./../assets/img/project-3.jpg";
 import project4 from "./../assets/img/project-4.jpg";
 import project5 from "./../assets/img/project-5.jpg";
 import project6 from "./../assets/img/project-6.jpg";
-// const carousal1=require("./public/images/carousal1.jpg");
 export default function Home() {
     return (
         <div>
@@ -46,45 +46,6 @@ export default function Home() {
             </div>
             {/* Topbar End */}
             <Navbar />
-            {/* Navbar Start */}
-
-            {/* <div className="container-fluid bg-primary">
-                <div className="container">
-                    <nav className="navbar navbar-dark navbar-expand-lg py-0">
-                        <a href="index.html" className="navbar-brand">
-                            <h1 className="text-white fw-bold d-block">Dora<span className="text-secondary">Infotech</span> </h1>
-                        </a>
-                        <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse bg-transparent" id="navbarCollapse">
-                            <div className="navbar-nav ms-auto mx-xl-auto p-0">
-                                <a href="#" className="nav-item nav-link active text-secondary">Home</a>
-                                <Link to="/about" className="nav-item nav-link">About</Link>
-                               
-                                <div className="nav-item dropdown">
-                                    <Link to={"/services"} className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</Link>
-                                    <div className="dropdown-menu rounded">
-                                        <a href="#" className="dropdown-item">Printer Services</a>
-                                        <a href="#" className="dropdown-item">Laptop Services</a>
-                                    </div>
-                                </div>
-                                <div className="nav-item dropdown">
-                                    <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                    <div className="dropdown-menu rounded">
-                                        <a href="#" className="dropdown-item">Our Blog</a>
-                                        <a href="#" className="dropdown-item">Our Team</a>
-                                        <a href="#" className="dropdown-item">Testimonials</a>
-                                    </div>
-                                </div>
-                                <a href="#" className="nav-item nav-link">Contact</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div> */}
-            {/* Navbar End */}
-
             {/* Slideshow Start */}
             <div className="container-fluid px-0">
                 <div id="carouselId" className="carousel slide" data-bs-ride="carousel">
@@ -274,18 +235,18 @@ export default function Home() {
         <div className="container-fluid project py-5 mb-5">
             <div className="container">
                 <div className="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style={{maxwidth: '600px'}}>
-                    <h5 className="text-primary">Our Project</h5>
-                    <h1>Our Recently Completed Projects</h1>
+                    <h1 className="text-primary">Our Projects</h1>
+                    
                 </div>
                 <div className="row g-5">
                     <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
                         <div className="project-item">
                             <div className="project-img">
-                                <img src={project1} className="img-fluid w-100 rounded" alt="" />
+                                <img src={work1} className="img-fluid w-100 rounded" alt="" />
                                 <div className="project-content">
                                     <a href="#" className="text-center">
-                                        <h4 className="text-secondary">Web design</h4>
-                                        <p className="m-0 text-white">Web Analysis</p>
+                                        <h4 className="text-secondary">Networking</h4>
+                                        <p className="m-0 text-white">Complete organisational network setup</p>
                                     </a>
                                 </div>
                             </div>
