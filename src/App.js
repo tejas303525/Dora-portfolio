@@ -9,6 +9,8 @@ import Project from "./pages/Project"
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import MediumPosts from "./pages/MediumPosts"
 import Blog from "./pages/Blog"
+import Roadmap from './pages/Roadmap';
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +23,7 @@ function App() {
       <Route path="/Team" element={<Team />} />
       <Route path="/Testimonials" element={<Testimonials/>} />
       <Route path="/Contact" element={<Contact/>} />
+      <Route path="/roadmap" element={<Roadmap />} />
       </Routes>
       </BrowserRouter>
 
