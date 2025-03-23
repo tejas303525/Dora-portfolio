@@ -34,7 +34,7 @@ return (
                                 <a href="#" className="dropdown-item">Testimonials</a>
                             </div>
                         </div>
-                        <a href="#" className="nav-item nav-link">Contact</a>
+                        <Link to='/Contact' className="nav-item nav-link">Contact</Link>
                     </div>
                 </div>
             </nav>
